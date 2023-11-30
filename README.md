@@ -22,4 +22,9 @@ ssh -T git@github.com
 git branch -m main
 git push origin -u main
 ```
+## composer
+after change composer and config in autoload
+```
+composer dump-autoload
+```
 
