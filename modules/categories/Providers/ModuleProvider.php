@@ -9,7 +9,7 @@ class ModuleProvider extends ServiceProvider
 {
     public function register() :void
     {
-//        dd('category module provider register');
+        $this->loadMigrationsFrom("modules/categories/database/migrations");
     }
 
     public function boot() :void
