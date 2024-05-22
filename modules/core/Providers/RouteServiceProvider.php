@@ -13,7 +13,7 @@ class RouteServiceProvider extends ServiceProvider
         foreach ($modules as $module) {
             $apiRoutes = base_path('modules/' . $module . '/routes/api.php');
             $webRoutes = base_path('modules/'.$module.'/routes/web.php');
-            $namespace = 'Modules\\'.$module.'\\Http\Controllers';
+            $namespace = 'Modules\\'.$module.'\\Http\\Controllers';
             if(file_exists($apiRoutes)){
                 Route::middleware('api')->namespace($namespace)->prefix('api')->group($apiRoutes);
             }
